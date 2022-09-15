@@ -1,0 +1,21 @@
+.header {
+  // .header__container
+  &__container {
+    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__logo
+  &__logo {
+    width: auto;
+    height: 92px;
+    margin-right: 20px;
+  }
+
+  &__main-nav .main-nav__list{
+    margin-right: 40px;
+  }
+}
+

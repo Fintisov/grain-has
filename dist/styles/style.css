@@ -1,5 +1,53 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "MinSans";
+  src: url("../../fonts/MinSans-Thin.woff2") format("woff2"), url("../../fonts/MinSans-Thin.woff") format("woff"), url("../../fonts/MinSans-Thin.ttf") format("ttf"), url("../../fonts/MinSans-Thin.eot") format("eot");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinSans";
+  src: url("../../fonts/MinSans-Light.woff2") format("woff2"), url("../../fonts/MinSans-Light.woff") format("woff"), url("../../fonts/MinSans-Light.ttf") format("ttf"), url("../../fonts/MinSans-Light.eot") format("eot");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinSans";
+  src: url("../../fonts/MinSans-Regular.woff2") format("woff2"), url("../../fonts/MinSans-Regular.woff") format("woff"), url("../../fonts/MinSans-Regular.ttf") format("ttf"), url("../../fonts/MinSans-Regular.eot") format("eot");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinSans";
+  src: url("../../fonts/MinSans-Medium.woff2") format("woff2"), url("../../fonts/MinSans-Medium.woff") format("woff"), url("../../fonts/MinSans-Medium.ttf") format("ttf"), url("../../fonts/MinSans-Medium.eot") format("eot");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinSans";
+  src: url("../../fonts/MinSans-Bold.woff2") format("woff2"), url("../../fonts/MinSans-Bold.woff") format("woff"), url("../../fonts/MinSans-Bold.ttf") format("ttf"), url("../../fonts/MinSans-Bold.eot") format("eot");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinSans";
+  src: url("../../fonts/MinSans-Black.woff2") format("woff2"), url("../../fonts/MinSans-Black.woff") format("woff"), url("../../fonts/MinSans-Black.ttf") format("ttf"), url("../../fonts/MinSans-Black.eot") format("eot");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -62,6 +110,8 @@ a {
 
 img {
   max-width: 100%;
+  max-height: 100%;
+  height: auto;
   display: block;
 }
 
@@ -77,10 +127,46 @@ img {
   padding: 0 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 .container-fluid {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+@media screen and (max-width: 575px) {
+  .container-fluid {
+    padding: 0 20px;
+  }
 }
 
 .visibility-hidden {
@@ -94,15 +180,19 @@ img {
   border: 0;
 }
 
+.icon {
+  stroke: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
 p.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   text-underline-offset: 4px;
 }
 
 p.strikethrough {
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
 }
 
 p.caps {
@@ -145,66 +235,123 @@ p.caps {
   font-weight: 900;
 }
 
-@supports (-webkit-appearance:none) {
+.header__container {
+  padding-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  width: auto;
+  height: 92px;
+  margin-right: 20px;
+}
+
+.header__main-nav .main-nav__list {
+  margin-right: 40px;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: auto;
+}
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 35px;
+}
+
+.main-nav__link {
+  font: 500 18px/1.25 "MinSans", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.main-nav__contact {
+  font: 500 22px/1.25 "MinSans", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  color: #ffd26f;
+}
+
+.main-nav__contact .icon {
+  fill: #ffd26f;
+  width: 62px;
+  height: 64px;
+}
+@supports (-webkit-appearance:none){
 
 }
 
-@media screen and (max-width: 1400px) {
-  .container {
-    max-width: 1140px;
-  }
+ @media screen and (max-width: 1400px){
 
-@supports (-webkit-appearance:none) {
+@supports (-webkit-appearance:none){
 
 }
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-
-@supports (-webkit-appearance:none) {
 
 }
-}
 
-@media screen and (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
+ @media screen and (max-width: 1200px){
 
-@supports (-webkit-appearance:none) {
+@supports (-webkit-appearance:none){
 
 }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-
-@supports (-webkit-appearance:none) {
 
 }
-}
 
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
+ @media screen and (max-width: 992px){
 
-@supports (-webkit-appearance:none) {
+@supports (-webkit-appearance:none){
 
 }
-}
-
-@media screen and (max-width: 575px) {
-  .container-fluid {
-    padding: 0 20px;
-  }
-
-@supports (-webkit-appearance:none) {
 
 }
+
+ @media screen and (max-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 576px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media screen and (max-width: 575px){
+
+@supports (-webkit-appearance:none){
+
+}
+
 }

@@ -1,0 +1,42 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+
+
+  // .main-nav__list
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 35px;
+  }
+
+  // .main-nav__link
+  &__link {
+    font-family: $font-minSans;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.25;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+
+  // .main-nav__contact
+  &__contact {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    font-family: $font-minSans;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.25;
+    color: $color-yellow;
+
+    .icon {
+      fill: $color-yellow;
+      width: 62px;
+      height: 64px;
+    }
+  }
+}
