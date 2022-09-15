@@ -1,0 +1,68 @@
+@use "sass:math";
+
+// вычисление lh и задавание fz
+@mixin font($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: math.div($line-height, $font-size);
+}
+
+// Отображение количества строк
+@mixin line-text-hidden($col: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $col; /* количество строк */
+}
+
+// Кастомный скролбар
+@mixin style-scrollbar($width: 10px, $height: 6px) {
+  scrollbar-color: #39c039 transparent;
+  scrollbar-width: thin;
+
+  // style for scrollbar
+  ::-webkit-scrollbar {
+    width: $width; /* ширина для вертикального скролла */
+    height: $height; /* высота для горизонтального скролла */
+    background-color: transparent;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: #FF4500FF;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #b202b2;
+  }
+
+  /* Стрелки */
+
+  ::-webkit-scrollbar-button:vertical:start:decrement,
+  ::-webkit-scrollbar-button:vertical:end:increment,
+  ::-webkit-scrollbar-button:vertical:end:increment,
+  ::-webkit-scrollbar-button:horizontal:start:decrement,
+  ::-webkit-scrollbar-button:horizontal:end:increment {
+    display: none;
+  }
+}
+
+// Расстояние от текста до подчеркнутой линии
+@mixin underline-text($under: 4px) {
+  text-decoration-line: underline;
+  text-underline-offset: $under;
+}
+
+// Скрыть элемента
+@mixin visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

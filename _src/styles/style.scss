@@ -1,0 +1,19 @@
+@use "sass:math";
+//******************** LIBS ********************
+
+//******************** GLOBAL ********************
+@import "global/variables";
+@import "global/fonts";
+
+//******************** MIXINS ********************
+@import "_mixins/media";
+@import "_mixins/reset";
+@import "_mixins/general";
+
+//******************** OTHER ********************
+@import "global/default-style";
+@import "global/helper-classes";
+@import "global/typography";
+
+//******************** BLOCKS ********************
+@import "blocks/header";

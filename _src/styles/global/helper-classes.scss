@@ -1,0 +1,57 @@
+// body-wrapper для удобства работы с Pixel Perfect !!! УДАЛЯТЬ !!!
+//=============================
+.body-wrapper {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+//=============================
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @include max-screen(1400px) {
+    max-width: 1140px;
+  }
+
+  @include max-screen(1200px) {
+    max-width: 960px;
+  }
+
+  @include max-screen(992px) {
+    max-width: 720px;
+  }
+
+  @include max-screen(768px) {
+    max-width: 540px;
+  }
+
+  @include max-screen(576px) {
+    max-width: 100%;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @include max-screen(575px) {
+    padding: 0 20px;
+  }
+}
+
+.visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
