@@ -376,6 +376,15 @@ img {
   color: #ffffff;
 }
 
+.text {
+  font: 400 20px/1.9 "MinSans", sans-serif;
+  color: #1f1f1f;
+}
+
+.text--white {
+  color: #ffffff;
+}
+
 p.underline {
   text-decoration-line: underline;
   text-underline-offset: 4px;
@@ -576,54 +585,23 @@ p.caps {
   letter-spacing: 0.3px;
   margin-bottom: 90px;
 }
-@supports (-webkit-appearance:none){
 
+.about-us {
+  background: url("../images/bg_about-us.png") no-repeat left top/cover;
+  padding: 197px 0 186px;
+  -webkit-background-size: cover;
 }
 
- @media screen and (max-width: 1400px){
-
-@supports (-webkit-appearance:none){
-
+.about-us__content {
+  width: 50%;
+  max-width: 650px;
+  margin-left: auto;
 }
 
+.about-us__title {
+  margin-bottom: 59px;
 }
 
- @media screen and (max-width: 1200px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media screen and (max-width: 992px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media screen and (max-width: 768px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media screen and (max-width: 576px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media screen and (max-width: 575px){
-
-@supports (-webkit-appearance:none){
-
-}
-
+.about-us__text:not(:last-of-type) {
+  margin-bottom: 38px;
 }
