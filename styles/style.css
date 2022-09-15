@@ -456,7 +456,7 @@ p.caps {
 }
 
 .header__main-nav .main-nav__list {
-  margin-right: 40px;
+  margin-right: 45px;
 }
 
 .main-nav {
@@ -489,7 +489,7 @@ p.caps {
 }
 
 .main-nav__contact {
-  font: 500 22px/1.25 "MinSans", sans-serif;
+  font: 500 21px/1.5 "MinSans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,7 +556,7 @@ p.caps {
   margin: 0 auto;
   text-align: center;
   position: absolute;
-  top: 238px;
+  bottom: 238px;
   left: 50%;
   -webkit-transform: translatex(-50%);
       -ms-transform: translatex(-50%);
