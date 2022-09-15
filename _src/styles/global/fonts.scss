@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'MinSans';
+  src: url('../../fonts/MinSans-Thin.woff2') format('woff2'),
+  url('../../fonts/MinSans-Thin.woff') format('woff'),
+  url('../../fonts/MinSans-Thin.ttf') format('ttf'),
+  url('../../fonts/MinSans-Thin.eot') format('eot');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinSans';
+  src: url('../../fonts/MinSans-Light.woff2') format('woff2'),
+  url('../../fonts/MinSans-Light.woff') format('woff'),
+  url('../../fonts/MinSans-Light.ttf') format('ttf'),
+  url('../../fonts/MinSans-Light.eot') format('eot');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinSans';
+  src: url('../../fonts/MinSans-Regular.woff2') format('woff2'),
+  url('../../fonts/MinSans-Regular.woff') format('woff'),
+  url('../../fonts/MinSans-Regular.ttf') format('ttf'),
+  url('../../fonts/MinSans-Regular.eot') format('eot');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinSans';
+  src: url('../../fonts/MinSans-Medium.woff2') format('woff2'),
+  url('../../fonts/MinSans-Medium.woff') format('woff'),
+  url('../../fonts/MinSans-Medium.ttf') format('ttf'),
+  url('../../fonts/MinSans-Medium.eot') format('eot');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinSans';
+  src: url('../../fonts/MinSans-Bold.woff2') format('woff2'),
+  url('../../fonts/MinSans-Bold.woff') format('woff'),
+  url('../../fonts/MinSans-Bold.ttf') format('ttf'),
+  url('../../fonts/MinSans-Bold.eot') format('eot');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinSans';
+  src: url('../../fonts/MinSans-Black.woff2') format('woff2'),
+  url('../../fonts/MinSans-Black.woff') format('woff'),
+  url('../../fonts/MinSans-Black.ttf') format('ttf'),
+  url('../../fonts/MinSans-Black.eot') format('eot');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
