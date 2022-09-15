@@ -1,0 +1,33 @@
+.about-us {
+  padding: 197px 0 186px;
+  background-image: url("../images/bg_about-us.png");
+  background-position: left top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+  // .about-us__container
+  &__container {
+
+  }
+
+  // .about-us__content
+  &__content {
+    width: 50%;
+    max-width: 650px;
+    margin-left: auto;
+  }
+
+  // .about-us__title
+  &__title {
+    margin-bottom: 59px;
+  }
+
+  // .about-us__text
+  &__text {
+    &:not(:last-of-type) {
+      margin-bottom: 38px;
+    }
+  }
+}

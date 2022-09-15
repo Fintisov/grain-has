@@ -92,3 +92,15 @@
     color: $color-white;
   }
 }
+
+.text {
+  font-family: $font-minSans;
+  @include font(20px, 38px);
+  font-weight: 400;
+  color: $color-black-light;
+
+
+  &--white {
+    color: $color-white;
+  }
+}

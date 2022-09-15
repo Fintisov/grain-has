@@ -5,10 +5,7 @@ const path = {
     root: pathDist,
 
     html: {
-        src: [`${pathSrc}/pages/*.html`,
-            `!${pathSrc}/pages/_head.html`,
-            `!${pathSrc}/pages/_script.html`
-        ],
+        src: [`${pathSrc}/pages/*.html`],
         watch: `${pathSrc}/pages/**/*.html`,
         dist: `${pathDist}`
     },
