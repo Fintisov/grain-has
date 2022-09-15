@@ -27,8 +27,8 @@ const path = {
     },
 
     image: {
-        src: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
-        watch: `${pathSrc}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
+        src: `${pathSrc}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+        watch: `${pathSrc}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
         destSrc: `${pathSrc}/images`,
         dist: `${pathDist}/images`,
     },

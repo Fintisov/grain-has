@@ -1,5 +1,6 @@
 @use "sass:math";
 //******************** LIBS ********************
+@import "node_modules/tiny-slider/src/tiny-slider.scss";
 
 //******************** GLOBAL ********************
 @import "global/variables";
@@ -18,3 +19,4 @@
 //******************** BLOCKS ********************
 @import "blocks/header";
 @import "blocks/main-nav";
+@import "blocks/main-banner";

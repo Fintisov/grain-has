@@ -1,7 +1,8 @@
 // body-wrapper для удобства работы с Pixel Perfect !!! УДАЛЯТЬ !!!
 //=============================
 .body-wrapper {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -59,4 +60,35 @@
   stroke: currentColor;
   width: 24px;
   height: 24px;
+}
+
+//=============================
+
+.button {
+  // .button--wight
+  min-width: 256px;
+  min-height: 72px;
+  text-align: center;
+  padding: 24px 10px;
+  display: inline-block;
+  font-family: $font-minSans;
+  font-weight: 500;
+  @include font(25px, 38px);
+  color: $color-green;
+
+  &--wight {
+    background-color: $color-white;
+  }
+}
+
+.title {
+  font-family: $font-minSans;
+  @include font(80px, 102px);
+  font-weight: 400;
+  color: $color-green-light;
+
+  // .title--wight
+  &--wight {
+    color: $color-white;
+  }
 }
