@@ -56,6 +56,10 @@
   border: 0;
 }
 
+.display-none {
+  display: none;
+}
+
 .icon {
   stroke: currentColor;
   width: 24px;
@@ -65,21 +69,46 @@
 //=============================
 
 .button {
-  // .button--wight
+  position: relative;
   min-width: 256px;
   min-height: 72px;
-  text-align: center;
   padding: 24px 10px;
   display: inline-block;
+  text-align: center;
   font-family: $font-minSans;
   font-weight: 500;
   @include font(25px, 38px);
   color: $color-white;
   background-color: $color-green;
 
-  &--wight {
+  // .button--white
+  &--white {
     background-color: $color-white;
     color: $color-green;
+  }
+
+  &--arrow {
+    text-align: start;
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+
+    }
+  }
+
+  // .button--xl
+  &--xl {
+    min-width: 306px;
+    padding: 24px 60px 24px 30px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    fill: $color-white;
   }
 }
 
@@ -92,10 +121,11 @@
   color: $color-green;
   text-transform: uppercase;
 
-  // .link--arrow
+  // .button-link--arrow
   &--arrow-r {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+
     .icon {
       fill: $color-green;
       width: 44px;
@@ -125,8 +155,8 @@
     font-size: 50px;
   }
 
-  // .title--wight
-  &--wight {
+  // .title--white
+  &--white {
     color: $color-white;
   }
 }
@@ -149,4 +179,175 @@
   &--white {
     color: $color-white;
   }
+}
+
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 33px 38px 26px;
+  font-family: $font-minSans;
+  font-weight: 400;
+  @include font(24px, 32px);
+  color: $color-black-light;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 0;
+  transition: 0.2s;
+  outline: none;
+
+  &:focus, &:active, &:focus-visible {
+    border: 2px solid $color_green-light;
+    border-radius: 0;
+    outline: none;
+  }
+
+  &:placeholder {
+    color: $color-black-light;
+  }
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: $color-white;
+  background-image: url("../images/arrow-sel.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 46px;
+  cursor: pointer;
+
+  &::invalid {
+    color: $color-black-light;
+  }
+}
+
+textarea {
+  resize: none;
+  min-height: 220px;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.field-group {
+
+  // .field-group--50
+  &--50 {
+    width: calc(50% - 10px);
+  }
+
+  // .field-group__input
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-box-shadow: inset 0 0 0 100px #fff;
+    margin: 0;
+  }
+}
+
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.field-label {
+  font-family: $font-minSans;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $color-black-light;
+}
+
+.field-input {
+
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-family: $font-minSans;
+  font-weight: 500;
+  @include font(22px, 28px);
+  color: $color-grey;
+  cursor: pointer;
+
+  > input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+
+    + .checkbox__custom {
+      display: inline-block;
+      position: relative;
+      width: 28px;
+      height: 28px;
+      background-color: $color-white;
+      border-radius: 50%;
+      border: 1px solid $color-grey;
+      transition: 0.2s;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: transparent;
+        transition: 0.2s;
+      }
+    }
+
+    /* стили при наведении курсора на checkbox */
+    &:not(:disabled):not(:checked):hover + .checkbox__custom {
+
+      &:before {
+        background-color: $color_mint;
+      }
+    }
+
+    /* стили для активного чекбокса (при нажатии на него) */
+    &:not(:disabled):active + .checkbox__custom::before {
+      background-color: $color-mint;
+    }
+
+    /* стили для чекбокса, находящегося в фокусе */
+    &:focus + .checkbox__custom::before {
+      //background-color: $color-white;
+    }
+
+    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    &:focus:not(:checked) + .checkbox__custom::before {
+      //background-color: $color-mint;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии checked */
+    &:checked + .checkbox__custom::before {
+      background-color: $color-green;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    &:disabled + .checkbox__custom {
+      cursor: not-allowed;
+
+      &:before {
+        color: $color-grey;
+        background-color: $color-grey;
+        cursor: default;
+      }
+    }
+  }
+
 }

@@ -26,7 +26,7 @@ function style() {
         .pipe(cleanCss())
         .pipe(rename({extname: '.min.css'}))
         .pipe(size({title: "style.min.css"}))
-        .pipe(dest(path.style.destSrc, {sourcemaps: app.isDev}))
+        .pipe(dest(path.style.destSrc))
         .pipe(dest(path.style.dist, {sourcemaps: app.isDev}))
 }
 

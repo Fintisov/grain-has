@@ -15,36 +15,45 @@ h6 {
 h1 {
   //font-size: 42px;
 
-  @include max-screen(767) {}
+  @include max-screen(767) {
+  }
 
-  &.lg {}
-  &.sm {}
+  &.lg {
+  }
+
+  &.sm {
+  }
 
 }
 
 h2 {
 
-  @include max-screen(767) {}
+  @include max-screen(767) {
+  }
 }
 
 h3 {
 
-  @include max-screen(767) {}
+  @include max-screen(767) {
+  }
 }
 
 h4 {
 
-  @include max-screen(767) {}
+  @include max-screen(767) {
+  }
 }
 
 h5 {
 
-  @include max-screen(767) {}
+  @include max-screen(767) {
+  }
 }
 
 h6 {
 
-  @include max-screen(767) {}
+  @include max-screen(767) {
+  }
 }
 
 p {
@@ -55,16 +64,19 @@ p {
   //line-height: 1.5;
   //margin: 0;
 
-  @include max-screen(767) {}
+  @include max-screen(767) {
+  }
 
   &.lg {
 
-    @include max-screen(767) {}
+    @include max-screen(767) {
+    }
   }
 
   &.sm {
 
-    @include max-screen(767) {}
+    @include max-screen(767) {
+    }
   }
 
   &.underline {
@@ -83,27 +95,35 @@ p {
 .fw-100 {
   font-weight: 100;
 }
+
 .fw-200 {
   font-weight: 200;
 }
+
 .fw-300 {
   font-weight: 300;
 }
+
 .fw-400 {
   font-weight: 400;
 }
+
 .fw-500 {
   font-weight: 500;
 }
+
 .fw-600 {
   font-weight: 600;
 }
+
 .fw-700 {
   font-weight: 700;
 }
+
 .fw-800 {
   font-weight: 800;
 }
+
 .fw-900 {
   font-weight: 900;
 }

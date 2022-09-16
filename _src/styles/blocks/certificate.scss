@@ -11,12 +11,28 @@
 
   // .certificate__content
   &__content {
-    background-color: $color-white;
-    margin-left: auto;
     padding-top: 137px;
     padding-bottom: 107px;
     padding-left: 136px;
     max-width: 789px;
+    position: relative;
+    background-color: $color-white;
+    margin-left: auto;
+
+    &:before {
+      content: "";
+      width: 226px;
+      height: 226px;
+      background-image: url("../images/label_certificate.png");
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 74px;
+      left: 0;
+      transform: translateX(-50%);
+    }
   }
 
   // .certificate__title
