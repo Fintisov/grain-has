@@ -376,6 +376,12 @@ img {
   color: #ffffff;
 }
 
+.subtitle {
+  font: 500 31px/2 "MinSans", sans-serif;
+  letter-spacing: -0.3px;
+  color: #9d9d9d;
+}
+
 .text {
   font: 400 20px/1.9 "MinSans", sans-serif;
   color: #1f1f1f;
@@ -534,6 +540,7 @@ p.caps {
           transform: translateX(-50%);
   bottom: 116px;
   z-index: 1;
+  min-height: 20px;
 }
 
 .main-banner__slider .tns-nav button {
@@ -604,4 +611,67 @@ p.caps {
 
 .about-us__text:not(:last-of-type) {
   margin-bottom: 38px;
+}
+
+.products {
+  padding: 138px 0 124px;
+}
+
+.products__titile-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 69px;
+}
+
+.product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 55px 26px;
+}
+
+.product-list .__item-wrapper {
+  width: calc(33% - 13px);
+}
+
+.card {
+  max-width: 416px;
+  width: 100%;
+}
+
+.card__img {
+  margin-bottom: 22px;
+}
+
+.card__img img {
+  width: 416px;
+  height: 440px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__title {
+  font: 500 26px/1.4615384615 "MinSans", sans-serif;
+  color: #67955c;
+  display: -webkit-box;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* количество строк */
+  text-transform: uppercase;
 }

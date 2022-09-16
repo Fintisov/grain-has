@@ -93,12 +93,20 @@
   }
 }
 
+.subtitle {
+  font-family: $font-minSans;
+  font-size: 31px;
+  line-height: 2;
+  letter-spacing: -0.3px;
+  font-weight: 500;
+  color: $color-grey;
+}
+
 .text {
   font-family: $font-minSans;
   @include font(20px, 38px);
   font-weight: 400;
   color: $color-black-light;
-
 
   &--white {
     color: $color-white;
