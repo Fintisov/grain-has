@@ -1,0 +1,20 @@
+.contact-us {
+  padding: 170px 0 162px;
+  background-image: url("../images/bg_contact.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // .contact-us__content
+  &__content {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  // .contact-us__titile
+  &__titile {
+    @include font(50px, 70px);
+    margin-bottom: 82px;
+  }
+}

@@ -355,21 +355,27 @@ img {
 
 .button {
   font: 500 25px/1.52 "MinSans", sans-serif;
+  background: #477534;
   min-width: 256px;
   min-height: 72px;
   text-align: center;
   padding: 24px 10px;
   display: inline-block;
-  color: #477534;
+  color: #ffffff;
 }
 
 .button--wight {
   background: #ffffff;
+  color: #477534;
 }
 
 .title {
   font: 400 80px/1.275 "MinSans", sans-serif;
   color: #67955c;
+}
+
+.title--sm {
+  font-size: 50px;
 }
 
 .title--wight {
@@ -614,7 +620,7 @@ p.caps {
 }
 
 .products {
-  padding: 138px 0 124px;
+  padding: 138px 0 115px;
 }
 
 .products__titile-inner {
@@ -674,4 +680,21 @@ p.caps {
   -webkit-line-clamp: 2;
   /* количество строк */
   text-transform: uppercase;
+}
+
+.contact-us {
+  background: url("../images/bg_contact.png") no-repeat center right/cover;
+  padding: 170px 0 162px;
+}
+
+.contact-us__content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-us__titile {
+  font-size: 50px;
+  line-height: 1.4;
+  margin-bottom: 82px;
 }
