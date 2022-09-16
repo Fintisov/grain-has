@@ -83,6 +83,37 @@
   }
 }
 
+.button-link {
+  font-family: $font-minSans;
+  font-weight: 700;
+  @include font(24px, 32px);
+  @include underline-text(4px);
+  letter-spacing: 1px;
+  color: $color-green;
+  text-transform: uppercase;
+
+  // .link--arrow
+  &--arrow-r {
+    display: flex;
+    align-items: center;
+    .icon {
+      fill: $color-green;
+      width: 44px;
+      height: 44px;
+      margin-left: 11px;
+    }
+  }
+
+  &--yellow {
+    color: $color-yellow;
+
+    .icon {
+      fill: $color-yellow;
+    }
+  }
+
+}
+
 .title {
   font-family: $font-minSans;
   @include font(80px, 102px);

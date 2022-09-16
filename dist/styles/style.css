@@ -355,7 +355,7 @@ img {
 
 .button {
   font: 500 25px/1.52 "MinSans", sans-serif;
-  background: #477534;
+  background: #588844;
   min-width: 256px;
   min-height: 72px;
   text-align: center;
@@ -366,7 +366,40 @@ img {
 
 .button--wight {
   background: #ffffff;
-  color: #477534;
+  color: #588844;
+}
+
+.button-link {
+  font: 700 24px/1.3333333333 "MinSans", sans-serif;
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  letter-spacing: 1px;
+  color: #588844;
+  text-transform: uppercase;
+}
+
+.button-link--arrow-r {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-link--arrow-r .icon {
+  fill: #588844;
+  width: 44px;
+  height: 44px;
+  margin-left: 11px;
+}
+
+.button-link--yellow {
+  color: #ffd26f;
+}
+
+.button-link--yellow .icon {
+  fill: #ffd26f;
 }
 
 .title {
@@ -549,6 +582,14 @@ p.caps {
   min-height: 20px;
 }
 
+.main-banner__slider .tns-nav:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .main-banner__slider .tns-nav button {
   width: 12px;
   height: 12px;
@@ -697,4 +738,29 @@ p.caps {
   font-size: 50px;
   line-height: 1.4;
   margin-bottom: 82px;
+}
+
+.certificate {
+  background: url("../images/bg_certificate.png") no-repeat 0 0/46% 100% #ffffff;
+}
+
+.certificate__content {
+  background: #ffffff;
+  margin-left: auto;
+  padding-top: 137px;
+  padding-bottom: 107px;
+  padding-left: 136px;
+  max-width: 789px;
+}
+
+.certificate__title {
+  margin-bottom: 68px;
+}
+
+.certificate__text:not(:last-of-type) {
+  margin-bottom: 38px;
+}
+
+.certificate__button-link {
+  margin-top: 105px;
 }

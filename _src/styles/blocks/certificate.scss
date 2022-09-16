@@ -1,0 +1,37 @@
+.certificate {
+  background-color: $color-white;
+  background-image: url("../images/bg_certificate.png");
+  background-repeat: no-repeat;
+  background-size: 46% 100%;
+
+  // .certificate__container
+  &__container {
+
+  }
+
+  // .certificate__content
+  &__content {
+    background-color: $color-white;
+    margin-left: auto;
+    padding-top: 137px;
+    padding-bottom: 107px;
+    padding-left: 136px;
+    max-width: 789px;
+  }
+
+  // .certificate__title
+  &__title {
+    margin-bottom: 68px;
+  }
+
+  // .certificate__text
+  &__text {
+    &:not(:last-of-type) {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__button-link {
+    margin-top: 105px;
+  }
+}
