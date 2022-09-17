@@ -1145,10 +1145,23 @@ p.caps {
 
 .contact-us {
   padding: 170px 0 162px;
+  background-color: #f2f7f1;
   background-image: url("../images/bg_contact.png");
-  background-position: center right;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (max-width: 1400px) {
+  .contact-us {
+    padding: 120px 0 100px;
+    background-size: 650px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contact-us {
+    padding: 60px 0 100px;
+    background-size: 400px;
+  }
 }
 .contact-us__content {
   max-width: 960px;
@@ -1159,6 +1172,17 @@ p.caps {
   font-size: 50px;
   line-height: 1.4;
   margin-bottom: 82px;
+}
+@media screen and (max-width: 1400px) {
+  .contact-us__titile {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-us__titile {
+    font-size: 26px;
+  }
 }
 
 .certificate {

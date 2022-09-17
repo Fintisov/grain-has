@@ -1,9 +1,22 @@
 .contact-us {
   padding: 170px 0 162px;
+  background-color: $color-mint;
   background-image: url("../images/bg_contact.png");
-  background-position: center right;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include max-screen(1400px) {
+    padding: 120px 0 100px;
+    -webkit-background-size: 30%;
+    background-size: 650px;
+  }
+
+  @include max-screen(576px) {
+    padding: 60px 0 100px;
+    -webkit-background-size: 30%;
+    background-size: 400px;
+  }
 
   // .contact-us__content
   &__content {
@@ -16,5 +29,14 @@
   &__titile {
     @include font(50px, 70px);
     margin-bottom: 82px;
+
+    @include max-screen(1400px) {
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+
+    @include max-screen(768px) {
+      font-size: 26px;
+    }
   }
 }
