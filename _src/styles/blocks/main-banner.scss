@@ -104,12 +104,19 @@
     }
 
     @include max-screen(992px) {
-      font-size: 42px;
-      max-width: 400px;
+      font-size: 72px;
       margin: 0 auto 32px;
     }
 
-    @include max-screen(576px) {
+    @include max-screen(768px) {
+      font-size: 56px;
+    }
+
+    @include max-screen(575px) {
+      font-size: 42px;
+    }
+
+    @include max-screen(460px) {
       font-size: 34px;
       margin-bottom: 30px;
     }

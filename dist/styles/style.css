@@ -423,12 +423,12 @@ img {
 }
 @media screen and (max-width: 992px) {
   .title {
-    font-size: 62px;
+    font-size: 52px;
   }
 }
 @media screen and (max-width: 576px) {
   .title {
-    font-size: 42px;
+    font-size: 32px;
   }
 }
 .title--sm {
@@ -910,12 +910,21 @@ p.caps {
 }
 @media screen and (max-width: 992px) {
   .main-banner__title {
-    font-size: 42px;
-    max-width: 400px;
+    font-size: 72px;
     margin: 0 auto 32px;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
+  .main-banner__title {
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .main-banner__title {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 460px) {
   .main-banner__title {
     font-size: 34px;
     margin-bottom: 30px;
@@ -1010,7 +1019,7 @@ p.caps {
 }
 @media screen and (max-width: 576px) {
   .about-us__title {
-    font-size: 30px;
+    margin-bottom: 30px;
   }
 }
 .about-us__text:not(:last-of-type) {

@@ -163,11 +163,13 @@
   color: $color-green-light;
 
   @include max-screen(992px) {
-    font-size: 62px;
+    font-size: 52px;
   }
 
   @include max-screen(576px) {
-    font-size: 42px;
+    font-size: 32px;
+
+
   }
 
   //.title--sm
