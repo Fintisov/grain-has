@@ -22,39 +22,87 @@
 <body>
 
 <main>
-
-
-
-
-    <section class="certificate">
-    <div class="certificate__container container">
-        <div class="certificate__content">
-            <h2 class="certificate__title title">Certificate</h2>
-            <p class="certificate__text text">
-                We have an ISCC cerrficate, which makes it possible to supply
-                agricultural products to a European producer for the further
-                producron of biodiesel and other processing products. ISCC
-                (Internaronal Sustainability and Carbon Cerrficaron) is an
-                internaronal cerrficaron of sustainable producron and control of carbon emissions,
-                which was created by the Associaron in Germany.
+    
+    
+    
+    
+    
+    <section class="services">
+    <div class="services__container container">
+        <div class="services__content services__description">
+            <h2 class="services__title title title--white">Services</h2>
+            <p class="services__text text text--white">
+                LLC "GRAIN HAS" carries out road transportation
+                of agricultural products, bulk, liquid cargoes<br>
+                in Ukraine and abroad. We take into account<br>
+                the individual needs of customers, ensure strict
+                compliance with the agreed condirons <br>
+                at oprmal prices.
             </p>
-            <p class="certificate__text text">
-                Obtaining a cerrficate means compliance with the requirements
-                of careful use and protecron of land and water resources, control
-                and assessment of greenhouse gas emissions that occur during
-                the culrvaron, processing, storage and transportaron of grains.
+            <p class="services__text text text--white">
+                Our company has its own fleet of tank trucks
+                and grain trucks, which allows us to quickly
+                deliver agricultural products.
             </p>
-            <a href="#" class="certificate__button-link button-link button-link--arrow-r">
+            <a href="#" class="services__button-link button-link button-link--arrow-r button-link--yellow">
                 more info
                 <svg class="icon">
                     <use xlink:href="images/_sprite.svg#arrow-r"></use>
                 </svg>
             </a>
         </div>
+
+        <div class="services__content services__form-wrapper">
+            <form action="#">
+                <div class="services__form">
+                    <div class="field-group">
+                        <label class="field-group__label visibility-hidden" for="name">username</label>
+                        <input class="field-group__input" placeholder="Names" type="text" name="name" id="name">
+                    </div>
+
+                    <div class="services__field-row field-row">
+                        <div class="field-group field-group--50">
+                            <label class="field-group__label visibility-hidden" for="email">Email</label>
+                            <input class="field-group__input" placeholder="E-mail" type="email" name="name" id="email">
+                        </div>
+
+                        <div class="field-group--50">
+                            <label class="visibility-hidden" for="country">country</label>
+                            <select name="country" id="country">
+                                <option value="" disabled selected hidden>Country</option>
+                                <option value="">text</option>
+                                <option value="">text</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="visibility-hidden" for="message">message</label>
+                        <textarea placeholder="Message" id="message"></textarea>
+                    </div>
+                </div>
+
+                <div class="services__btn-form-group">
+
+                    <label class="checkbox" for="agreeCheckbox">
+                        <input type="checkbox" id="agreeCheckbox">
+                        <span class="checkbox__custom"></span>
+                        I agree
+                    </label>
+
+                    <button class="button button--arrow button--xl" type="submit">
+                        SEND
+                        <svg class="icon">
+                            <use xlink:href="images/_sprite.svg#arrow-r-2"></use>
+                        </svg>
+                    </button>
+                </div>
+
+            </form>
+        </div>
     </div>
 </section>
-
-
+    
 </main>
 
 <script src="scripts/script.js"></script>
