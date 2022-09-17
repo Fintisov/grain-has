@@ -14,6 +14,10 @@
       z-index: 1;
       min-height: 20px;
 
+      @include max-screen(1600px) {
+        bottom: 25px;
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -38,9 +42,27 @@
         }
       }
     }
+  }
 
-    .tns-ovh {
-      max-height: 1100px;
+  // .main-banner__slider-content
+  &__slider-content {
+    img {
+      width: 100%;
+      height: 1100px;
+      object-fit: cover;
+
+      @include max-screen(1600px) {
+        height: 100vh;
+        max-height: 1100px;
+      }
+
+      @include max-screen(992px) {
+        max-height: 650px;
+      }
+
+      @include max-screen(375px) {
+        max-height: 540px;
+      }
     }
   }
 
@@ -55,13 +77,47 @@
     bottom: 238px;
     left: 50%;
     transform: translatex(-50%);
+
+    @include max-screen(1600px) {
+      bottom: 50%;
+      transform: translate(-50%, 50%);
     }
+
+    @include max-screen(992px) {
+      max-width: 720px;
+    }
+  }
 
   // .main-banner__title
   &__title {
     @include font(90px, 102px);
     text-align: center;
     margin-bottom: 52px;
+
+    @include max-screen(1600px) {
+      font-size: 72px;
+    }
+
+    @media screen and (max-height: 750px) {
+      font-size: 60px;
+      margin: 0 auto 32px;
+    }
+
+    @include max-screen(992px) {
+      font-size: 42px;
+      max-width: 400px;
+      margin: 0 auto 32px;
+    }
+
+    @include max-screen(576px) {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+
+    @include max-screen(375px) {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
   }
 
   // .main-banner__description
@@ -72,6 +128,30 @@
     color: $color-white;
     letter-spacing: 0.3px;
     margin-bottom: 90px;
+
+    @include max-screen(1400px) {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+
+
+    @media screen and (max-height: 750px) {
+      margin-bottom: 40px;
+    }
+
+    @include max-screen(992px) {
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+
+    @include max-screen(576px) {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    @include max-screen(375px) {
+      font-size: 16px;
+    }
   }
 }
 
