@@ -727,7 +727,7 @@ p.caps {
 }
 
 .header__main-nav .main-nav__list {
-  margin-right: 49px;
+  margin-right: 40px;
 }
 
 .main-nav {
@@ -773,8 +773,8 @@ p.caps {
 
 .main-nav__contact .icon {
   fill: #ffd26f;
-  width: 62px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
 }
 
 .main-banner {
