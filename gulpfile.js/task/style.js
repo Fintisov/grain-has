@@ -17,7 +17,7 @@ function style() {
     return src(path.style.src, {sourcemaps: app.isDev})
         .pipe(plumber(notify.onError(app.style.plumber)))
         .pipe(sass(app.style.sass))
-        .pipe(shorthand())
+        .pipe(gulpIf(app.isProd, shorthand()))
         .pipe(gulpIf(app.isProd, groupMedia()))
         .pipe(autoprefixer(app.style.autoprefixer))
         .pipe(size({title: "style.css"}))

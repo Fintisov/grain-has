@@ -3,7 +3,6 @@
   align-items: center;
   margin-top: auto;
 
-
   // .main-nav__list
   &__list {
     display: flex;
@@ -38,5 +37,15 @@
       width: 72px;
       height: 72px;
     }
+  }
+
+}
+
+// btn menu
+.navbar-toggle {
+
+  // .navbar-toggle__icon
+  &__icon {
+
   }
 }

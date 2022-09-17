@@ -1,11 +1,24 @@
 .about-us {
   padding: 197px 0 186px;
   background-image: url("../images/bg_about-us.png");
-  background-position: left top;
+  background-color: $color-mint;
+  background-position: left bottom;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include max-screen(1600px) {
+    background-size: auto 450px;
+  }
+
+  @include max-screen(1200px) {
+    padding: 80px 0 340px;
+  }
+
+  @include max-screen(768px) {
+    padding: 40px 0 200px;
+    background-size: auto 210px;
+  }
 
   // .about-us__container
   &__container {
@@ -17,17 +30,34 @@
     width: 50%;
     max-width: 650px;
     margin-left: auto;
+
+    @include max-screen(1200px) {
+      width: 100%;
+      max-width: 556px;
+    }
   }
 
   // .about-us__title
   &__title {
     margin-bottom: 59px;
+
+    @include max-screen(992px) {
+      margin-bottom: 40px;
+    }
+
+    @include max-screen(576px) {
+      font-size: 30px;
+    }
   }
 
   // .about-us__text
   &__text {
     &:not(:last-of-type) {
       margin-bottom: 38px;
+
+      @include max-screen(992px) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
