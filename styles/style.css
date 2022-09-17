@@ -294,10 +294,46 @@ img {
   padding: 0 10px;
 }
 
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 .container-fluid {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+@media screen and (max-width: 575px) {
+  .container-fluid {
+    padding: 0 20px;
+  }
 }
 
 .visibility-hidden {
@@ -633,6 +669,31 @@ p.caps {
 
 .fw-900 {
   font-weight: 900;
+}
+
+.why-us-card {
+  background: #f2f7f1;
+  padding: 38px 32px 60px 45px;
+}
+
+.why-us-card__label-num {
+  font: 400 34px/1.25 "MinSans", sans-serif;
+  color: #ffffff;
+  display: block;
+  text-align: end;
+}
+
+.why-us-card__icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  fill: #588844;
+  margin-bottom: 32px;
+}
+
+.why-us-card__text {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .header {
@@ -1006,38 +1067,51 @@ p.caps {
   gap: 15px;
 }
 
-@media screen and (max-width: 1400px) {
-  .container {
-    max-width: 1140px;
-  }
+.why-us {
+  padding-top: 132px;
+  padding-bottom: 132px;
 }
 
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
+.why-us__title {
+  margin-bottom: 72px;
 }
 
-@media screen and (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
+.why-us-cards-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 22px 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
+.why-us-cards-wrapper .why-us-card--xl {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: 4;
 }
 
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
+.why-us-card {
+  background: #f2f7f1;
+  padding: 38px 32px 60px 45px;
 }
 
-@media screen and (max-width: 575px) {
-  .container-fluid {
-    padding: 0 20px;
-  }
+.why-us-card__label-num {
+  font: 400 34px/1.25 "MinSans", sans-serif;
+  color: #ffffff;
+  display: block;
+  text-align: end;
+}
+
+.why-us-card__icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  fill: #588844;
+  margin-bottom: 32px;
+}
+
+.why-us-card__text {
+  font-size: 18px;
+  line-height: 1.5;
 }
