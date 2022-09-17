@@ -1,6 +1,6 @@
 .why-us {
   padding-top: 132px;
-  padding-bottom: 132px;
+  padding-bottom: 129px;
 
   // .why-us__container
   &__container {
@@ -16,7 +16,7 @@
 .why-us-cards-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 22px 20px;
+  grid-gap: 20px;
 
   .why-us-card--xl {
     grid-column-start: 2;
