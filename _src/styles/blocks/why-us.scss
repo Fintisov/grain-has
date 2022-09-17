@@ -1,0 +1,25 @@
+.why-us {
+  padding-top: 132px;
+  padding-bottom: 132px;
+
+  // .why-us__container
+  &__container {
+
+  }
+
+  // .why-us__title
+  &__title {
+    margin-bottom: 72px;
+  }
+}
+
+.why-us-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 22px 20px;
+
+  .why-us-card--xl {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}

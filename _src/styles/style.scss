@@ -16,6 +16,9 @@
 @import "global/helper-classes";
 @import "global/typography";
 
+//******************** COMPONENT ********************
+@import "components/why-us-card";
+
 //******************** BLOCKS ********************
 @import "blocks/header";
 @import "blocks/main-nav";
@@ -25,3 +28,5 @@
 @import "blocks/contact";
 @import "blocks/certificate";
 @import "blocks/services";
+@import "blocks/why-us";
+@import "components/why-us-card";
