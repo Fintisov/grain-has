@@ -1,0 +1,31 @@
+.why-us-card {
+  padding: 38px 32px 60px 45px;
+  background-color: $color-mint;
+
+  // .why-us-card__label-num
+  &__label-num {
+    font-family: $font-minSans;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.25;
+    color: $color-white;
+    display: block;
+    text-align: end;
+  }
+
+  // .why-us-card__icon
+  &__icon {
+    display: block;
+    width: 120px;
+    height: 120px;
+    fill:$color-green;
+    margin-bottom: 32px;
+  }
+
+  // .why-us-card__text
+  &__text {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
