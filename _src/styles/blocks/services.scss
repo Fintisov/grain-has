@@ -1,16 +1,34 @@
 .services {
-  background: rgb(50,74,44);
-  background: linear-gradient(90deg, rgba(50,74,44,1) 46%, rgba(242,247,241,1) 46%);
+  background: rgb(50, 74, 44);
+  background: linear-gradient(90deg, rgba(50, 74, 44, 1) 46%, rgba(242, 247, 241, 1) 46%);
 
+  @include max-screen(1400px) {
+    background: linear-gradient(180deg, rgba(50, 74, 44, 1) 46%, rgba(242, 247, 241, 1) 46%);
+
+  }
   // .services__container
   &__container {
     display: flex;
+
+    @include max-screen(1400px) {
+      flex-direction: column;
+    }
   }
 
   // .services__content
   &__content {
     padding-top: 137px;
     padding-bottom: 149px;
+
+    @include max-screen(1400px) {
+      padding-top: 90px;
+      padding-bottom: 70px;
+    }
+
+    @include max-screen(768px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 
   // .services__description
@@ -19,6 +37,14 @@
     max-width: 511px;
     width: 100%;
     padding-right: 48px;
+
+    @include max-screen(1400px) {
+      max-width: 100%;
+      padding-right: 0;
+      background-color: transparent;
+    }
+
+
   }
 
   // .services__title
@@ -33,9 +59,27 @@
     }
   }
 
-  //services__button-link
+  // .services__button-link
   &__button-link {
     margin-top: 109px;
+
+    @include max-screen(1400px) {
+      margin-top: 70px;
+    }
+  }
+
+  // .services__field-row
+  &__field-row {
+    @include max-screen(576px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .field-group--50 {
+      @include max-screen(576px) {
+        width: 100%;
+      }
+    }
   }
 
   // .services__form-wrapper
@@ -45,6 +89,13 @@
     padding-top: 147px;
     padding-left: 136px;
     background-color: $color_mint;
+
+    @include max-screen(1400px) {
+      max-width: 100%;
+      padding-left: 0;
+      padding-top: 100px;
+      background-color: transparent;
+    }
   }
 
   // .services__form
@@ -53,6 +104,10 @@
     flex-direction: column;
     gap: 30px;
     margin-bottom: 116px;
+
+    @include max-screen(768px) {
+      margin-bottom: 80px;
+    }
   }
 
   // .services__btn-form-group
@@ -61,6 +116,17 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 15px;
+
+    @include max-screen(414px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .button {
+      @include max-screen(414px) {
+        width: 100%;
+      }
+    }
   }
 }
 

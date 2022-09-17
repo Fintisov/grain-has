@@ -90,8 +90,8 @@
   @include max-screen(768px) {
     font-size: 22px;
     padding: 14px 10px;
+    min-height: 60px;
   }
-  min-height: 60px;
 
   // .button--white
   &--white {
@@ -115,12 +115,27 @@
   &--xl {
     min-width: 306px;
     padding: 24px 60px 24px 30px;
+
+    @include max-screen(992px) {
+      padding: 18px 40px 18px 18px;
+      min-width: 250px;
+    }
+
+    @include max-screen(576px) {
+      padding: 18px 40px 18px 18px;
+      min-width: 200px;
+    }
   }
 
   .icon {
     width: 50px;
     height: 50px;
     fill: $color-white;
+
+    @include max-screen(992px) {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 
@@ -177,8 +192,6 @@
 
   @include max-screen(576px) {
     font-size: 32px;
-
-
   }
 
   //.title--sm
@@ -243,13 +256,18 @@ textarea {
   transition: 0.2s;
   outline: none;
 
+  @include max-screen(768px) {
+    padding: 22px 38px 17px;
+    font-size: 18px;
+  }
+
   &:focus, &:active, &:focus-visible {
     border: 2px solid $color_green-light;
     border-radius: 0;
     outline: none;
   }
 
-  &::placeholder {
+  &:placeholder {
     color: $color-black-light;
   }
 }
@@ -290,9 +308,6 @@ button {
 
   // .field-group__input
   &__input {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
     -webkit-box-shadow: inset 0 0 0 100px #fff;
     margin: 0;
   }
@@ -324,6 +339,10 @@ button {
   @include font(22px, 28px);
   color: $color-grey;
   cursor: pointer;
+
+  @include max-screen(992px) {
+    font-size: 18px;
+  }
 
   > input {
     position: absolute;
