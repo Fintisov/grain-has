@@ -294,46 +294,10 @@ img {
   padding: 0 10px;
 }
 
-@media screen and (max-width: 1400px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
-}
-
 .container-fluid {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
-}
-
-@media screen and (max-width: 575px) {
-  .container-fluid {
-    padding: 0 20px;
-  }
 }
 
 .visibility-hidden {
@@ -1040,4 +1004,40 @@ p.caps {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container-fluid {
+    padding: 0 20px;
+  }
 }
