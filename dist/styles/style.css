@@ -393,6 +393,11 @@ img {
   color: #588844;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .button-link {
+    font-size: 20px;
+  }
+}
 .button-link--arrow-r {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -406,6 +411,12 @@ img {
   width: 44px;
   height: 44px;
   margin-left: 11px;
+}
+@media screen and (max-width: 768px) {
+  .button-link--arrow-r .icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 .button-link--yellow {
   color: #ffd26f;
@@ -1191,6 +1202,11 @@ p.caps {
   background-repeat: no-repeat;
   background-size: 46% 100%;
 }
+@media screen and (max-width: 1400px) {
+  .certificate {
+    background-image: none;
+  }
+}
 .certificate__content {
   padding-top: 137px;
   padding-bottom: 107px;
@@ -1199,6 +1215,18 @@ p.caps {
   position: relative;
   background-color: #ffffff;
   margin-left: auto;
+}
+@media screen and (max-width: 1400px) {
+  .certificate__content {
+    margin: 0 auto;
+    padding-left: 0;
+    max-width: 650px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .certificate__content {
+    padding: 80px 0;
+  }
 }
 .certificate__content:before {
   content: "";
@@ -1215,14 +1243,47 @@ p.caps {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+@media screen and (max-width: 1400px) {
+  .certificate__content:before {
+    right: 0;
+    left: auto;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .certificate__content:before {
+    top: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .certificate__content:before {
+    top: 10px;
+    width: 100px;
+    height: 100px;
+  }
+}
 .certificate__title {
   margin-bottom: 68px;
+}
+@media screen and (max-width: 768px) {
+  .certificate__title {
+    margin-bottom: 40px;
+  }
 }
 .certificate__text:not(:last-of-type) {
   margin-bottom: 38px;
 }
 .certificate__button-link {
   margin-top: 105px;
+}
+@media screen and (max-width: 768px) {
+  .certificate__button-link {
+    margin-top: 50px;
+  }
 }
 
 .services {
