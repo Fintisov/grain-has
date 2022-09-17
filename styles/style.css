@@ -686,9 +686,9 @@ p.caps {
 .why-us-card__icon {
   display: block;
   width: 120px;
-  height: 120px;
+  height: 104px;
   fill: #588844;
-  margin-bottom: 32px;
+  margin-bottom: 50px;
 }
 
 .why-us-card__text {
@@ -1069,7 +1069,7 @@ p.caps {
 
 .why-us {
   padding-top: 132px;
-  padding-bottom: 132px;
+  padding-bottom: 129px;
 }
 
 .why-us__title {
@@ -1081,7 +1081,7 @@ p.caps {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 22px 20px;
+  grid-gap: 20px;
 }
 
 .why-us-cards-wrapper .why-us-card--xl {
@@ -1091,27 +1091,76 @@ p.caps {
   grid-column-end: 4;
 }
 
-.why-us-card {
-  background: #f2f7f1;
-  padding: 38px 32px 60px 45px;
+.footer {
+  background: #324a2c;
+  padding-top: 46px;
+  padding-bottom: 74px;
 }
 
-.why-us-card__label-num {
-  font: 400 34px/1.25 "MinSans", sans-serif;
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__block {
+  max-width: 310px;
+  min-height: 324px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  width: 100%;
+}
+
+.footer__logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer__copyright {
+  font: 400 20px/1.5 "MinSans", sans-serif;
   color: #ffffff;
-  display: block;
-  text-align: end;
+  letter-spacing: -0.5px;
 }
 
-.why-us-card__icon {
-  display: block;
-  width: 120px;
-  height: 120px;
-  fill: #588844;
-  margin-bottom: 32px;
+.footer-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 132px;
+     -moz-column-gap: 132px;
+          column-gap: 132px;
+  padding-top: 37px;
 }
 
-.why-us-card__text {
-  font-size: 18px;
-  line-height: 1.5;
+.footer-content__title {
+  font: 700 20px/1.5 "MinSans", sans-serif;
+  text-transform: uppercase;
+  color: #ffd26f;
+  margin-bottom: 40px;
+  letter-spacing: 7px;
+}
+
+.footer-content__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.footer-content__link {
+  font: 400 21px/1.3 "MinSans", sans-serif;
+  color: #ffffff;
+  letter-spacing: 1.4px;
 }
