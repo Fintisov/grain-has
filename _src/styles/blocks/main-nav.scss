@@ -4,7 +4,35 @@
   margin-top: auto;
 
   @include max-screen(1400px) {
-    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    background: darkgray;
+    padding: 120px 40px;
+    overflow: auto;
+
+    @include max-screen(576px) {
+      left: 0;
+    }
+
+    @include max-screen(360px) {
+      padding: 80px 20px;
+    }
+  }
+
+  // .main-nav__navbar-btn
+  .main-nav__navbar-btn {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    @include max-screen(1400px) {
+      display: block;
+    }
   }
 
   // .main-nav__list
@@ -13,6 +41,12 @@
     align-items: center;
     justify-content: flex-start;
     gap: 35px;
+
+    @include max-screen(1400px) {
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 100px;
+    }
   }
 
   // .main-nav__link
@@ -23,6 +57,10 @@
     line-height: 1.25;
     color: $color-black;
     text-transform: uppercase;
+
+    @include max-screen(1400px) {
+      font-size: 24px;
+    }
   }
 
   // .main-nav__contact
@@ -36,10 +74,24 @@
     line-height: 1.5;
     color: $color-yellow;
 
+    @include max-screen(1400px) {
+      font-size: 24px;
+      margin: 0 auto;
+    }
+
+    @include max-screen(360px) {
+      font-size: 20px;
+    }
+
     .icon {
       fill: $color-yellow;
       width: 72px;
       height: 72px;
+
+      @include max-screen(1400px) {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 
@@ -47,6 +99,8 @@
 
 // .navbar-btn
 .navbar-btn {
+  background-color: transparent;
+
   // .navbar-btn__icon
   &__toggle {
     width: 50px;

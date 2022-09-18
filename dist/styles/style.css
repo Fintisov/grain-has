@@ -224,9 +224,7 @@ dd {
   margin: 0;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -766,10 +764,15 @@ p.caps {
 
 .header {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   left: 0;
   top: 0;
+}
+@media screen and (max-width: 1400px) {
+  .header {
+    height: 100%;
+  }
 }
 .header__container {
   padding-top: 39px;
@@ -782,6 +785,11 @@ p.caps {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 1400px) {
+  .header__container {
+    padding-top: 20px;
+  }
 }
 .header__logo {
   width: auto;
@@ -816,7 +824,41 @@ p.caps {
 }
 @media screen and (max-width: 1400px) {
   .main-nav {
-    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: darkgray;
+    padding: 120px 40px;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 1400px) and (max-width: 576px) {
+  .main-nav {
+    left: 0;
+  }
+}
+@media screen and (max-width: 1400px) and (max-width: 360px) {
+  .main-nav {
+    padding: 80px 20px;
+  }
+}
+.main-nav .main-nav__navbar-btn {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+@media screen and (max-width: 1400px) {
+  .main-nav .main-nav__navbar-btn {
+    display: block;
   }
 }
 .main-nav__list {
@@ -831,6 +873,16 @@ p.caps {
           justify-content: flex-start;
   gap: 35px;
 }
+@media screen and (max-width: 1400px) {
+  .main-nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+    margin-bottom: 100px;
+  }
+}
 .main-nav__link {
   font-family: "MinSans", sans-serif;
   font-weight: 500;
@@ -838,6 +890,11 @@ p.caps {
   line-height: 1.25;
   color: #000000;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1400px) {
+  .main-nav__link {
+    font-size: 24px;
+  }
 }
 .main-nav__contact {
   display: -webkit-box;
@@ -853,12 +910,32 @@ p.caps {
   line-height: 1.5;
   color: #ffd26f;
 }
+@media screen and (max-width: 1400px) {
+  .main-nav__contact {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 360px) {
+  .main-nav__contact {
+    font-size: 20px;
+  }
+}
 .main-nav__contact .icon {
   fill: #ffd26f;
   width: 72px;
   height: 72px;
 }
+@media screen and (max-width: 1400px) {
+  .main-nav__contact .icon {
+    width: 50px;
+    height: 50px;
+  }
+}
 
+.navbar-btn {
+  background-color: transparent;
+}
 .navbar-btn__toggle {
   width: 50px;
   height: 50px;
@@ -935,7 +1012,7 @@ p.caps {
   }
 }
 .main-banner__content {
-  z-index: 1;
+  z-index: 2;
   max-width: 846px;
   width: 100%;
   margin: 0 auto;
