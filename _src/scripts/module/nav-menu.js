@@ -1,18 +1,23 @@
 function navMenu() {
     const body = document.querySelector("body");
-    const navbarBnt = document.querySelectorAll(".navbar-btn")
     const navbar = document.querySelector(".main-nav");
+    const header = document.querySelector(".header");
 
-    navbarBnt.forEach(elem => {
-        elem.addEventListener("click", () => {
-            if (!navbar.classList.contains("open") && !body.classList.contains("hidden")) {
-                navbar.classList.add("open");
-                body.classList.add("hidden");
-            } else {
-                navbar.classList.remove("open");
-                body.classList.remove("hidden");
-            }
-        })
+    function closeMenu() {
+        navbar.classList.remove("open");
+        body.classList.remove("hidden");
+    }
+
+    header.addEventListener("click", (e) => {
+        const target = e.target;
+
+        if (target.closest(".navbar-btn") && !body.classList.contains("hidden") && !navbar.classList.contains("open")) {
+            navbar.classList.add("open");
+            body.classList.add("hidden");
+        } else if (target.closest(".navbar-btn") || target.classList.contains("header") ||
+            target.closest(".header__logo") || target.closest(".main-nav__list")) {
+            closeMenu();
+        }
     })
 }
 

@@ -1,12 +1,16 @@
 .header {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   left: 0;
   top: 0;
+  transition-property:z-index;
+  transition-delay:0.3s;
 
   @include max-screen(1400px) {
+    overflow-x: hidden;
     height: 100%;
+
   }
 
   // .header__container
@@ -33,6 +37,7 @@
     }
   }
 
+  // .header__main-nav
   &__main-nav {
 
     .main-nav__list {
@@ -40,6 +45,63 @@
 
       @include max-screen(1400px) {
         margin-right: 0;
+      }
+    }
+  }
+
+  &__navbar-btn {
+    display: none;
+    fill: $color-white;
+
+    @include max-screen(1400px) {
+      display: block;
+    }
+  }
+}
+
+body {
+  &:before {
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: transparent;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s;
+  }
+
+  &.hidden {
+    overflow: hidden;
+
+    &:before {
+      display: block;
+      position: absolute;
+      background: $color-black;
+      opacity: 0.5;
+      z-index: 2;
+      transition: 150ms;
+    }
+
+    .header {
+      z-index: 3;
+      transition: 150ms;
+
+      .header__logo {
+        opacity: 0.5;
+        transition: 150ms;
+      }
+    }
+
+    .main-nav {
+      transform: translateX(0);
+      transition: 0.3s;
+
+      @include max-screen(576px) {
+        width: 100%;
       }
     }
   }

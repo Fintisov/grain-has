@@ -11,4 +11,4 @@ const bannerSlider = tns({
     autoplayButtonOutput: false,
 });
 
-export {bannerSlider};
+export default bannerSlider;
