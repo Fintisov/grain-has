@@ -19,10 +19,18 @@
     height: 92px;
     margin-right: 20px;
     flex: 1 0 auto;
+
+    @include max-screen(1400px) {
+      height: 82px;
+    }
   }
 
   &__main-nav .main-nav__list{
     margin-right: 40px;
+
+    @include max-screen(1400px) {
+      margin-right: 0;
+    }
   }
 }
 
