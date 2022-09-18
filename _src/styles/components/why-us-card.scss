@@ -2,6 +2,10 @@
   padding: 38px 32px 60px 45px;
   background-color: $color-mint;
 
+  @include max-screen(992px) {
+    padding: 30px;
+  }
+
   // .why-us-card__label-num
   &__label-num {
     font-family: $font-minSans;
@@ -20,6 +24,12 @@
     height: 104px;
     fill: #588844;
     margin-bottom: 50px;
+
+    @include max-screen(576px) {
+      width: 90px;
+      height: 75px;
+      margin-bottom: 25px;
+    }
   }
 
   // .why-us-card__text

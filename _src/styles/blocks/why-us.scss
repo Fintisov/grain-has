@@ -2,6 +2,10 @@
   padding-top: 132px;
   padding-bottom: 129px;
 
+  @include max-screen(576px) {
+    padding: 60px 0 40px;
+  }
+
   // .why-us__container
   &__container {
 
@@ -10,6 +14,10 @@
   // .why-us__title
   &__title {
     margin-bottom: 72px;
+
+    @include max-screen(768px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -18,8 +26,27 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 
+  @include max-screen(1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include max-screen(768px) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
   .why-us-card--xl {
     grid-column-start: 2;
     grid-column-end: 4;
+
+    @include max-screen(1200px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @include max-screen(768px) {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
   }
 }
