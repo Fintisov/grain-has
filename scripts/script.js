@@ -16,7 +16,17 @@
   \****************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"bannerSlider\": function() { return /* binding */ bannerSlider; }\n/* harmony export */ });\n/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-slider */ \"./node_modules/tiny-slider/dist/tiny-slider.js\");\n\nconst bannerSlider = (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({\n  container: '.main-banner__slider-content',\n  items: 1,\n  slideBy: 'page',\n  controls: false,\n  autoplay: true,\n  loop: true,\n  autoHeight: false,\n  autoplayButtonOutput: false\n});\n\n\n//# sourceURL=webpack://grain-has/./_src/scripts/module/main-banner__slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-slider */ \"./node_modules/tiny-slider/dist/tiny-slider.js\");\n\nconst bannerSlider = (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({\n  container: '.main-banner__slider-content',\n  items: 1,\n  slideBy: 'page',\n  controls: false,\n  autoplay: true,\n  loop: true,\n  autoHeight: false,\n  autoplayButtonOutput: false\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (bannerSlider);\n\n//# sourceURL=webpack://grain-has/./_src/scripts/module/main-banner__slider.js?");
+
+/***/ }),
+
+/***/ "./_src/scripts/module/nav-menu.js":
+/*!*****************************************!*\
+  !*** ./_src/scripts/module/nav-menu.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\nfunction navMenu() {\n  const body = document.querySelector(\"body\");\n  const navbar = document.querySelector(\".main-nav\");\n  const header = document.querySelector(\".header\");\n\n  function closeMenu() {\n    navbar.classList.remove(\"open\");\n    body.classList.remove(\"hidden\");\n  }\n\n  header.addEventListener(\"click\", e => {\n    const target = e.target;\n\n    if (target.closest(\".navbar-btn\") && !body.classList.contains(\"hidden\") && !navbar.classList.contains(\"open\")) {\n      navbar.classList.add(\"open\");\n      body.classList.add(\"hidden\");\n    } else if (target.closest(\".navbar-btn\") || target.classList.contains(\"header\") || target.closest(\".header__logo\") || target.closest(\".main-nav__list\")) {\n      closeMenu();\n    }\n  });\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (navMenu);\n\n//# sourceURL=webpack://grain-has/./_src/scripts/module/nav-menu.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_main_banner_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/main-banner__slider */ \"./_src/scripts/module/main-banner__slider.js\");\n\nwindow.addEventListener(\"DOMContentLoaded\", () => {\n  _module_main_banner_slider__WEBPACK_IMPORTED_MODULE_0__.bannerSlider;\n});\n\n//# sourceURL=webpack://grain-has/./_src/scripts/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_main_banner_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/main-banner__slider */ \"./_src/scripts/module/main-banner__slider.js\");\n/* harmony import */ var _module_nav_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/nav-menu */ \"./_src/scripts/module/nav-menu.js\");\n\n\nwindow.addEventListener(\"DOMContentLoaded\", () => {\n  _module_main_banner_slider__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n  (0,_module_nav_menu__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n});\n\n//# sourceURL=webpack://grain-has/./_src/scripts/script.js?");
 
 /***/ }),
 
@@ -67,23 +77,6 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n\n
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
