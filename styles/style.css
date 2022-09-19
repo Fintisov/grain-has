@@ -2017,7 +2017,9 @@ p.caps {
   }
 }
 .header__logo {
-  width: auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   height: 92px;
   margin-right: 20px;
   -webkit-box-flex: 1;
@@ -2027,6 +2029,11 @@ p.caps {
 @media screen and (max-width: 1400px) {
   .header__logo {
     height: 82px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header__logo {
+    height: 62px;
   }
 }
 .header__main-nav .main-nav__list {
@@ -2272,6 +2279,7 @@ body.hidden .main-nav {
   -o-transition: 0.2s;
   transition: 0.2s;
   border: none;
+  padding: 0;
 }
 .main-banner__slider .tns-nav button.tns-nav-active {
   width: 18px;
@@ -2288,11 +2296,13 @@ body.hidden .main-nav {
   .main-banner__slider-content img {
     height: 100vh;
     max-height: 1100px;
+    min-height: 900px;
   }
 }
 @media screen and (max-width: 992px) {
   .main-banner__slider-content img {
-    max-height: 650px;
+    min-height: 650px;
+    max-height: 800px;
   }
 }
 @media screen and (max-width: 375px) {
