@@ -34,6 +34,7 @@
         color: $color-white;
         transition: 0.2s;
         border: none;
+        padding: 0;
 
         &.tns-nav-active {
           width: 18px;
@@ -54,10 +55,12 @@
       @include max-screen(1600px) {
         height: 100vh;
         max-height: 1100px;
+        min-height: 900px;
       }
 
       @include max-screen(992px) {
-        max-height: 650px;
+        min-height: 650px;
+        max-height: 800px;
       }
 
       @include max-screen(375px) {

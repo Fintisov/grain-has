@@ -15,7 +15,7 @@ function navMenu() {
             navbar.classList.add("open");
             body.classList.add("hidden");
         } else if (target.closest(".navbar-btn") || target.classList.contains("header") ||
-            target.closest(".header__logo") || target.closest(".main-nav__list")) {
+            target.closest(".header__logo") || target.closest(".main-nav__item")) {
             closeMenu();
         }
     })

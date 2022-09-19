@@ -10,7 +10,6 @@
   @include max-screen(1400px) {
     overflow-x: hidden;
     height: 100%;
-
   }
 
   // .header__container
@@ -27,13 +26,17 @@
 
   // .header__logo
   &__logo {
-    width: auto;
+    max-width: max-content;
     height: 92px;
     margin-right: 20px;
     flex: 1 0 auto;
 
     @include max-screen(1400px) {
       height: 82px;
+    }
+
+    @include max-screen(576px) {
+      height: 62px;
     }
   }
 
