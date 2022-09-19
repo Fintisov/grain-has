@@ -2,6 +2,7 @@ import {tns} from "tiny-slider";
 import SmoothScroll from "smooth-scroll"
 import AOS from 'aos';
 import navMenu from "./module/nav-menu";
+import modal from "./module/modal-window";
 
 window.addEventListener("DOMContentLoaded", () => {
     tns({
@@ -24,4 +25,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     navMenu();
+
+    modal("modal-certificate");
 })

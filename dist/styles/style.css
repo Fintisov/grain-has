@@ -1980,6 +1980,95 @@ p.caps {
   line-height: 1.5;
 }
 
+.modal {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal.show {
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.modal.show .modal__content {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.modal__content {
+  position: relative;
+  padding: 140px 120px;
+  max-width: 1260px;
+  margin: auto;
+  width: 100%;
+  background-color: #d6e1d4;
+  overflow: auto;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (max-width: 992px) {
+  .modal__content {
+    padding: 140px 40px 50px;
+  }
+}
+.modal__btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: transparent;
+}
+.modal__btn .icon {
+  width: 50px;
+  height: 50px;
+  fill: #588844;
+}
+.modal .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 38px;
+}
+@media screen and (max-width: 992px) {
+  .modal .modal-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.modal .content-item {
+  border: 3px solid #588844;
+  padding: 15px 30px;
+  max-width: 400px;
+  height: auto;
+  background-color: #ffffff;
+}
+.modal .content-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .header {
   position: absolute;
   z-index: 1;
@@ -2094,7 +2183,7 @@ body.hidden .header .header__logo {
   -o-transition: 150ms;
   transition: 150ms;
 }
-body.hidden .main-nav {
+body.hidden .main-nav.show {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
@@ -2103,7 +2192,7 @@ body.hidden .main-nav {
   transition: 0.3s;
 }
 @media screen and (max-width: 576px) {
-  body.hidden .main-nav {
+  body.hidden .main-nav.show {
     width: 100%;
   }
 }

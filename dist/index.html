@@ -200,7 +200,8 @@
                 and grain trucks, which allows us to quickly
                 deliver agricultural products.
             </p>
-            <a href="#" class="services__button-link button-link button-link--arrow-r button-link--yellow">
+            <a href="#" data-modal="modal-certificate"
+               class="services__button-link button-link button-link--arrow-r button-link--yellow">
                 more info
                 <svg class="icon">
                     <use xlink:href="images/_sprite.svg#arrow-r"></use>
@@ -258,7 +259,7 @@
         </div>
     </div>
 </section>
-        <section class="why-us" id="benefits">
+            <section class="why-us" id="benefits">
     <div class="why-us__container container">
         <h2 class="why-us__title title">Why us?</h2>
 
@@ -383,6 +384,27 @@
         </div>
     </div>
 </footer>
+<div class="modal" id="modal-certificate">
+    <div class="modal__content">
+
+        <div class="modal-header">
+            <button class="modal__btn">
+                <svg class="icon">
+                    <use xlink:href="images/_sprite.svg#exit"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="content-item">
+                <picture><source srcset="images/certificate_1.webp" type="image/webp"><img src="images/certificate_1.png" alt="ISCC"></picture>
+            </div>
+            <div class="content-item">
+                <picture><source srcset="images/certificate_2.webp" type="image/webp"><img src="images/certificate_2.png" alt="ISCC"></picture>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="scripts/script.js"></script>
 
 </body>
