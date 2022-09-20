@@ -1,4 +1,4 @@
-const {watch, series, parallel} = require("gulp");
+const {src, dest, watch, series, parallel} = require("gulp");
 
 //конфигурация
 const path = require("./config/path");
@@ -15,7 +15,7 @@ const script = require("./task/script");
 const image = require("./task/image");
 const font = require("./task/font");
 const asset = require("./task/asset");
-const other = require("./task/other");
+
 
 function server() {
     browserSync.init(app.server.browserSync);
@@ -30,6 +30,21 @@ function watcher() {
     watch(path.asset.watch, asset).on("all", browserSync.reload);
 }
 
+
+// общие
+function otherVender() {
+    return src("./_src/vendor/**/*")
+        .pipe(dest('./dist/vendor'))
+}
+
+function otherSendmail() {
+    return src([`./_src/composer.json`,
+        `./_src/composer.lock`,
+        `./_src/sendmail.php`])
+        .pipe(dest('./dist'))
+}
+
+
 // задачи
 exports.html = html;
 exports.style = style;
@@ -37,20 +52,26 @@ exports.script = script;
 exports.image = image;
 exports.font = font;
 exports.asset = asset;
-exports.other = other;
 exports.clear = clear;
 exports.watcher = watcher;
 exports.server = server;
+exports.otherVender = otherVender;
+exports.otherSendmail = otherSendmail;
+
 
 const production = series(
     clear,
-    parallel(html, style, script, image, font, asset, other),
+    parallel(html, style, script, image, font, asset),
     parallel(watcher, server),
+);
+
+const vendor = series(
+    parallel(otherVender, otherSendmail),
 );
 
 const developer = series(
     clear,
-    parallel(html, style, script, image, font, asset, other),
+    parallel(html, style, script, image, font, asset),
     parallel(watcher, server),
 )
 

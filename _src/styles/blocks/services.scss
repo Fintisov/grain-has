@@ -96,6 +96,28 @@
       padding-top: 100px;
       background-color: transparent;
     }
+
+    &._sending {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      &:after {
+        content: url("../images/loader.gif");
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 
   // .services__form

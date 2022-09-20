@@ -1,4 +1,5 @@
 function sendForm() {
+    const body = document.querySelector("body");
     const form = document.querySelector("#form-servis");
     form.addEventListener("submit", formSend);
 
@@ -9,7 +10,9 @@ function sendForm() {
         let formData = new FormData(form);
 
         if (error === 0) {
-            form.classList.add("_sending");
+            form.parentElement.classList.add("_sending");
+            body.classList.add("hidden");
+
             let response = await fetch("sendmail.php", {
                 method: "POST",
                 body: formData,
@@ -18,11 +21,12 @@ function sendForm() {
                 let result = await response.json();
                 alert(result.message);
                 form.reset();
-                form.classList.remove("_sending");
-
+                form.parentElement.classList.remove("_sending");
+                body.classList.remove("hidden");
             } else {
                 alert("Error");
-                form.classList.remove("_sending");
+                form.parentElement.classList.remove("_sending");
+                body.classList.remove("hidden");
             }
         }
     }
@@ -40,6 +44,9 @@ function sendForm() {
                     error++;
                 }
             } else if (elem.getAttribute("type") === "checkbox" && elem.checked === false) {
+                formAddError(elem);
+                error++;
+            } else if (elem.getAttribute("id") === "country" && elem.value === "-") {
                 formAddError(elem);
                 error++;
             } else {

@@ -24,7 +24,7 @@ $mail->setFrom("mailsendler2022@gmail.com");
 ////кому отправить
 $mail->addAddress("fintisov.vadim@gmail.com");
 ////Тема письма
-$mail->Subject = "GRAINHAS.COM";
+$mail->Subject = "grainhas.com";
 
 $body = '<h1>GRAINHAS.COM</h1>';
 
