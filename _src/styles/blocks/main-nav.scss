@@ -58,6 +58,13 @@
     line-height: 1.25;
     color: $color-black;
     text-transform: uppercase;
+    display: inline-block;
+    scale: 1;
+    transition: 0.2s;
+
+    &:hover {
+      scale: 1.1;
+    }
 
     @include max-screen(1400px) {
       font-size: 24px;

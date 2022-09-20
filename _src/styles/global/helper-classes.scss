@@ -82,6 +82,35 @@
   @include font(25px, 38px);
   color: $color-white;
   background-color: $color-green;
+  z-index: 1;
+  overflow: hidden;
+  scale: 1;
+  transition: 0.3s;
+
+
+  &:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #3d8422;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    scale: 1.1;
+
+    &:before {
+      transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+    }
+  }
+
 
   @include max-screen(992px) {
     padding: 16px 10px;
@@ -97,6 +126,10 @@
   &--white {
     background-color: $color-white;
     color: $color-green;
+
+    &:before {
+      background-color: #efefef;
+    }
   }
 
   &--arrow {
@@ -157,11 +190,19 @@
     display: inline-flex;
     align-items: center;
 
+    &:hover {
+      .icon {
+        transform: translateX(5px);
+      }
+    }
+
     .icon {
       fill: $color-green;
       width: 44px;
       height: 44px;
       margin-left: 11px;
+      transform: translateX(0);
+      transition: 150ms;
 
       @include max-screen(768px) {
         width: 30px;
@@ -253,7 +294,8 @@ textarea {
   width: 100%;
   border: 2px solid white;
   border-radius: 0;
-  transition: 0.2s;
+  box-shadow: 0;
+  transition: 0.2s all;
   outline: none;
 
   @include max-screen(768px) {
@@ -269,6 +311,10 @@ textarea {
 
   &:placeholder {
     color: $color-black-light;
+  }
+
+  &:hover {
+    box-shadow: 0 0 7px $color_green-light;
   }
 }
 
