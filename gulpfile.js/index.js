@@ -15,6 +15,7 @@ const script = require("./task/script");
 const image = require("./task/image");
 const font = require("./task/font");
 const asset = require("./task/asset");
+const other = require("./task/other");
 
 function server() {
     browserSync.init(app.server.browserSync);
@@ -36,19 +37,20 @@ exports.script = script;
 exports.image = image;
 exports.font = font;
 exports.asset = asset;
+exports.other = other;
 exports.clear = clear;
 exports.watcher = watcher;
 exports.server = server;
 
 const production = series(
     clear,
-    parallel(html, style, script, image, font, asset),
+    parallel(html, style, script, image, font, asset, other),
     parallel(watcher, server),
 );
 
 const developer = series(
     clear,
-    parallel(html, style, script, image, font, asset),
+    parallel(html, style, script, image, font, asset, other),
     parallel(watcher, server),
 )
 

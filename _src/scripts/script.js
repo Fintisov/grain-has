@@ -3,6 +3,7 @@ import SmoothScroll from "smooth-scroll"
 import AOS from 'aos';
 import navMenu from "./module/nav-menu";
 import modal from "./module/modal-window";
+import sendForm from "./module/send-form";
 
 window.addEventListener("DOMContentLoaded", () => {
     tns({
@@ -27,4 +28,6 @@ window.addEventListener("DOMContentLoaded", () => {
     navMenu();
 
     modal("modal-certificate");
+
+    sendForm();
 })

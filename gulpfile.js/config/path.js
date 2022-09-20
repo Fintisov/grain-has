@@ -33,7 +33,6 @@ const path = {
     asset: {
         src: `${pathSrc}/assets/**/*`,
         watch: `${pathSrc}/assets/**/*`,
-        destSrc: `${pathSrc}/assets`,
         dist: `${pathDist}/assets`,
     },
 
@@ -49,7 +48,8 @@ const path = {
 
     server: {
         baseDir: [`${pathDist}/pages`, pathDist],
-    }
+    },
+
 }
 
 module.exports = path;

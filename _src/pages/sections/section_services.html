@@ -25,39 +25,41 @@
         </div>
 
         <div class="services__content services__form-wrapper">
-            <form action="#">
+
+
+            <form action="#" id="form-servis">
                 <div class="services__form">
                     <div class="field-group">
                         <label class="field-group__label visibility-hidden" for="name">username</label>
-                        <input class="field-group__input" placeholder="Names" type="text" name="name" id="name">
+                        <input class="field-group__input _req" placeholder="Names" type="text" name="name" id="name">
                     </div>
 
                     <div class="services__field-row field-row">
                         <div class="field-group field-group--50">
                             <label class="field-group__label visibility-hidden" for="email">Email</label>
-                            <input class="field-group__input" placeholder="E-mail" type="email" name="name" id="email">
+                            <input class="field-group__input _email _req" type="email" name="email" id="email"
+                                   placeholder="E-mail">
                         </div>
 
                         <div class="field-group--50">
                             <label class="visibility-hidden" for="country">country</label>
                             <select name="country" id="country">
-                                <option value="" disabled selected hidden>Country</option>
-                                <option value="">text</option>
-                                <option value="">text</option>
+                                <option value="country" disabled selected hidden>Country</option>
+                                <option value="country-1">text</option>
+                                <option value="country-2">text</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="field-group">
                         <label class="visibility-hidden" for="message">message</label>
-                        <textarea placeholder="Message" id="message"></textarea>
+                        <textarea class="textarea _req" name="message" id="message" placeholder="Message"></textarea>
                     </div>
                 </div>
 
                 <div class="services__btn-form-group">
-
                     <label class="checkbox" for="agreeCheckbox">
-                        <input type="checkbox" id="agreeCheckbox">
+                        <input class="_req" type="checkbox" name="agree-checkbox" id="agreeCheckbox">
                         <span class="checkbox__custom"></span>
                         I agree
                     </label>
@@ -69,7 +71,6 @@
                         </svg>
                     </button>
                 </div>
-
             </form>
         </div>
     </div>

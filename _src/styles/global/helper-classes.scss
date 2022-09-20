@@ -301,6 +301,15 @@ button {
 
 .field-group {
 
+  &._error {
+    input,
+    select,
+    textarea {
+      border: 2px solid #ff3434;
+      box-shadow: 0px 0px 10px 0px rgba(255, 52, 52, 1);
+    }
+  }
+
   // .field-group--50
   &--50 {
     width: calc(50% - 10px);
@@ -332,7 +341,7 @@ button {
 
 .checkbox {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   font-family: $font-minSans;
   font-weight: 500;
@@ -344,6 +353,11 @@ button {
     font-size: 18px;
   }
 
+  &._error > input + .checkbox__custom {
+    border: 1px solid #ff3434;
+    box-shadow: 0px 0px 10px 0px rgba(255, 52, 52, 1);
+  }
+
   > input {
     position: absolute;
     width: 0;
@@ -352,7 +366,10 @@ button {
     z-index: -1;
 
     + .checkbox__custom {
-      display: inline-block;
+      display: inline-flex;
+      flex: 1 0 auto;
+      justify-content: center;
+      align-items: center;
       position: relative;
       width: 28px;
       height: 28px;
@@ -366,10 +383,7 @@ button {
         display: block;
         width: 12px;
         height: 12px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        transform: scale(0);
         border-radius: 50%;
         background-color: transparent;
         transition: 0.2s;
@@ -380,6 +394,7 @@ button {
     &:not(:disabled):not(:checked):hover + .checkbox__custom {
 
       &:before {
+        transform: scale(0.5);
         background-color: $color_mint;
       }
     }
@@ -402,6 +417,7 @@ button {
     /* стили для чекбокса, находящегося в состоянии checked */
     &:checked + .checkbox__custom::before {
       background-color: $color-green;
+      transform: scale(1);
     }
 
     /* стили для чекбокса, находящегося в состоянии disabled */
