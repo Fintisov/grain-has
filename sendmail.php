@@ -24,9 +24,9 @@ $mail->setFrom("mailsendler2022@gmail.com");
 ////кому отправить
 $mail->addAddress("fintisov.vadim@gmail.com");
 ////Тема письма
-$mail->Subject = "GRAINHAS.COM";
+$mail->Subject = "grainhas.com";
 
-$body = '<h1>Заявка - GRAINHAS.COM</h1>';
+$body = '<h1>GRAINHAS.COM</h1>';
 
 if (trim(!empty($_POST['name']))) {
     $body .= '<p><strong>Name: </strong>' . $_POST['name'] . '</p>';
