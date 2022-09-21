@@ -6,6 +6,7 @@ import modal from "./module/modal-window";
 import sendForm from "./module/send-form";
 
 window.addEventListener("DOMContentLoaded", () => {
+    let screenWidth = window.screen.width;
 
     tns({
         container: '.main-banner__slider-content',
@@ -23,7 +24,8 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     AOS.init({
-        duration: 600
+        duration: 600,
+        disable: 'phone'
     });
 
     navMenu();

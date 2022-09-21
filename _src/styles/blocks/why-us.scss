@@ -35,18 +35,40 @@
     justify-content: center;
   }
 
-  .why-us-card--xl {
-    grid-column-start: 2;
-    grid-column-end: 4;
+  .why-us-card {
+    // .why-us-card
+    &__text {
+      padding-right: 50px;
 
-    @include max-screen(1200px) {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      @include max-screen(1400px) {
+        padding-right: 0;
+      }
     }
 
-    @include max-screen(768px) {
-      grid-column-start: 1;
-      grid-column-end: 1;
+    //   .why-us-card--xl
+    &--xl {
+      grid-column-start: 2;
+      grid-column-end: 4;
+
+      @include max-screen(1200px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      @include max-screen(768px) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+      }
+
+      .why-us-card__text {
+        padding-right: 152px;
+
+        @include max-screen(1400px) {
+          padding-right: 0;
+        }
+      }
     }
   }
+
+
 }

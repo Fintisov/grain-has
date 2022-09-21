@@ -3092,6 +3092,14 @@ body.hidden .main-nav.show {
             justify-content: center;
   }
 }
+.why-us-cards-wrapper .why-us-card__text {
+  padding-right: 50px;
+}
+@media screen and (max-width: 1400px) {
+  .why-us-cards-wrapper .why-us-card__text {
+    padding-right: 0;
+  }
+}
 .why-us-cards-wrapper .why-us-card--xl {
   -ms-grid-column: 2;
       grid-column-start: 2;
@@ -3112,6 +3120,14 @@ body.hidden .main-nav.show {
         grid-column-start: 1;
     -ms-grid-column-span: 0;
     grid-column-end: 1;
+  }
+}
+.why-us-cards-wrapper .why-us-card--xl .why-us-card__text {
+  padding-right: 152px;
+}
+@media screen and (max-width: 1400px) {
+  .why-us-cards-wrapper .why-us-card--xl .why-us-card__text {
+    padding-right: 0;
   }
 }
 
