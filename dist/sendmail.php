@@ -22,7 +22,7 @@ $mail->Password = "thcwjdrnuzavurbr";
 //от кого
 $mail->setFrom("mailsendler2022@gmail.com");
 ////кому отправить
-$mail->addAddress("fintisov.vadim@gmail.com");
+$mail->addAddress("grein.has@gmail.com");
 ////Тема письма
 $mail->Subject = "grainhas.com";
 
