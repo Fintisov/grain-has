@@ -48,7 +48,6 @@
       transform: translateX(-50%);
 
       @include max-screen(1400px) {
-        right: 0;
         left: auto;
         transform: translateX(0);
         width: 150px;
@@ -60,7 +59,7 @@
       }
 
       @include max-screen(576px) {
-        top: 10px;
+        top: 20px;
         width: 100px;
         height: 100px;
       }
@@ -71,8 +70,15 @@
   &__title {
     margin-bottom: 68px;
 
+    @include max-screen(1400px) {
+      padding-left: 150px;
+    }
+
     @include max-screen(768px) {
       margin-bottom: 40px;
+    }
+    @include max-screen(576px) {
+      padding-left: 100px;
     }
   }
 

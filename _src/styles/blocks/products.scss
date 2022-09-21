@@ -6,7 +6,7 @@
   }
 
   @include max-screen(576px) {
-    padding: 35px 0;
+    padding: 60px 0;
   }
 
   // .products__container
@@ -24,6 +24,10 @@
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 48px;
+    }
+
+    @include max-screen(576px) {
+      margin-bottom: 25px;
     }
   }
 }

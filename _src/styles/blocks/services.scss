@@ -3,9 +3,16 @@
   background: linear-gradient(90deg, rgba(50, 74, 44, 1) 46%, rgba(242, 247, 241, 1) 46%);
 
   @include max-screen(1400px) {
-    background: linear-gradient(180deg, rgba(50, 74, 44, 1) 46%, rgba(242, 247, 241, 1) 46%);
-
+    background: linear-gradient(180deg, rgba(50, 74, 44, 1) 42%, rgba(242, 247, 241, 1) 42%);
   }
+  @include max-screen(768px) {
+    background: linear-gradient(180deg, rgba(50, 74, 44, 1) 46%, rgba(242, 247, 241, 1) 46%);
+  }
+  @include max-screen(576px) {
+    background: linear-gradient(180deg, rgba(50, 74, 44, 1) 39%, rgba(242, 247, 241, 1) 39%);
+  }
+
+
   // .services__container
   &__container {
     display: flex;

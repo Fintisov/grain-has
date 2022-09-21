@@ -30,9 +30,9 @@
     }
 
     @include max-screen(768px) {
+      align-items: flex-start;
       flex-direction: column;
       gap: 25px;
-      align-items: center;
     }
   }
 
@@ -63,6 +63,7 @@
 
     @include max-screen(768px) {
       font-size: 14px;
+      margin: 0 auto;
     }
   }
 }

@@ -101,13 +101,8 @@
       font-size: 72px;
     }
 
-    @media screen and (max-height: 750px) {
-      font-size: 60px;
-      margin: 0 auto 32px;
-    }
-
     @include max-screen(992px) {
-      font-size: 72px;
+      font-size: 60px;
       margin: 0 auto 32px;
     }
 
@@ -116,16 +111,20 @@
     }
 
     @include max-screen(575px) {
-      font-size: 42px;
+      font-size: 52px;
     }
 
-    @include max-screen(460px) {
-      font-size: 34px;
+    @include max-screen(475px) {
+      font-size: 46px;
       margin-bottom: 30px;
     }
 
-    @include max-screen(375px) {
-      font-size: 26px;
+    @include max-screen(414px) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+    @include max-screen(360px) {
+      font-size: 34px;
       margin-bottom: 40px;
     }
   }
