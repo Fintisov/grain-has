@@ -2293,7 +2293,7 @@ body.hidden .main-nav.show {
   .main-nav {
     position: absolute;
     top: 0;
-    bottom: -100px;
+    bottom: 0;
     right: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2303,7 +2303,7 @@ body.hidden .main-nav.show {
         -ms-flex-pack: justify;
             justify-content: space-between;
     background: #ffffff;
-    padding: 120px 40px 220px 40px;
+    padding: 120px 40px;
     overflow: auto;
     -webkit-transform: translateX(110%);
         -ms-transform: translateX(110%);
@@ -2315,7 +2315,7 @@ body.hidden .main-nav.show {
 }
 @media screen and (max-width: 1400px) and (max-width: 360px) {
   .main-nav {
-    padding: 80px 20px 180px 20px;
+    padding: 80px 20px;
   }
 }
 .main-nav .main-nav__navbar-btn {
