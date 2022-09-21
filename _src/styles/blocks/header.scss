@@ -4,8 +4,17 @@
   width: 100%;
   left: 0;
   top: 0;
-  transition-property:z-index;
-  transition-delay:0.3s;
+  transition-property: z-index;
+  transition-delay: 0.3s;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.2s;
+  }
 
   @include max-screen(1400px) {
     overflow-x: hidden;
@@ -63,51 +72,27 @@
   }
 }
 
-body {
-  &:before {
-    content: "";
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background: transparent;
-    opacity: 0;
-    z-index: -1;
-    transition: 0.3s;
-  }
+body.hidden {
+  overflow: hidden;
 
-  &.hidden {
-    overflow: hidden;
+  .header {
+    z-index: 2;
+    transition: 150ms;
 
     &:before {
       display: block;
       position: absolute;
       background: $color-black;
       opacity: 0.5;
-      z-index: 2;
-      transition: 150ms;
     }
+  }
 
-    .header {
-      z-index: 3;
-      transition: 150ms;
+  .main-nav.show {
+    transform: translateX(0);
+    transition: 0.3s;
 
-      .header__logo {
-        opacity: 0.5;
-        transition: 150ms;
-      }
-    }
-
-    .main-nav.show {
-      transform: translateX(0);
-      transition: 0.3s;
-
-      @include max-screen(576px) {
-        width: 100%;
-      }
+    @include max-screen(576px) {
+      width: 100%;
     }
   }
 }
-

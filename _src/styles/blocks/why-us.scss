@@ -36,13 +36,15 @@
   }
 
   .why-us-card {
+    br {
+      @include max-screen(992px) {
+        display: none;
+      }
+    }
+
     // .why-us-card
     &__text {
-      padding-right: 50px;
 
-      @include max-screen(1400px) {
-        padding-right: 0;
-      }
     }
 
     //   .why-us-card--xl
@@ -59,16 +61,6 @@
         grid-column-start: 1;
         grid-column-end: 1;
       }
-
-      .why-us-card__text {
-        padding-right: 152px;
-
-        @include max-screen(1400px) {
-          padding-right: 0;
-        }
-      }
     }
   }
-
-
 }

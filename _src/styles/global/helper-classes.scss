@@ -1,13 +1,3 @@
-// body-wrapper для удобства работы с Pixel Perfect !!! УДАЛЯТЬ !!!
-//=============================
-.body-wrapper {
-  max-width: 1920px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-//=============================
-
 .container {
   max-width: 1320px;
   width: 100%;
@@ -295,7 +285,7 @@ textarea {
   border: 2px solid white;
   border-radius: 0;
   box-shadow: 0;
-  transition: 0.2s all;
+  transition: border 0.2s, box-shadow 0.2s;
   outline: none;
 
   @include max-screen(768px) {
@@ -329,7 +319,7 @@ select {
   background-size: 46px;
   cursor: pointer;
 
-  &::invalid {
+  &:invalid {
     color: $color-black-light;
   }
 }
@@ -363,7 +353,6 @@ button {
 
   // .field-group__input
   &__input {
-    -webkit-box-shadow: inset 0 0 0 100px #fff;
     margin: 0;
   }
 }

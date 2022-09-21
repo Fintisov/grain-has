@@ -22,7 +22,7 @@
     display: block;
     width: 120px;
     height: 104px;
-    fill: #588844;
+    fill: $color_green-light;
     margin-bottom: 50px;
 
     @include max-screen(576px) {
