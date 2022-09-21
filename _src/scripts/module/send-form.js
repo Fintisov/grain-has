@@ -9,8 +9,6 @@ function sendForm() {
         let error = formValidate();
         let formData = new FormData(form);
 
-        console.log(error)
-
         if (error === 0) {
             form.parentElement.classList.add("_sending");
             body.classList.add("hidden");
@@ -21,10 +19,8 @@ function sendForm() {
             });
 
             let result = await response.json();
-            console.log(result)
 
             if (response.ok) {
-                let result = await response.json();
                 alert(result.message);
                 form.reset();
                 form.parentElement.classList.remove("_sending");
