@@ -28,6 +28,7 @@ function watcher() {
     watch(path.image.watch, image).on("all", browserSync.reload);
     watch(path.font.watch, font).on("all", browserSync.reload);
     watch(path.asset.watch, asset).on("all", browserSync.reload);
+    watch([`./_src/sendmail.php`], otherSendmail).on("all", browserSync.reload);
 }
 
 
@@ -61,17 +62,13 @@ exports.otherSendmail = otherSendmail;
 
 const production = series(
     clear,
-    parallel(html, style, script, image, font, asset),
+    parallel(html, style, script, image, font, asset, otherVender, otherSendmail),
     parallel(watcher, server),
-);
-
-const vendor = series(
-    parallel(otherVender, otherSendmail),
 );
 
 const developer = series(
     clear,
-    parallel(html, style, script, image, font, asset),
+    parallel(html, style, script, image, font, asset, otherVender, otherSendmail),
     parallel(watcher, server),
 )
 

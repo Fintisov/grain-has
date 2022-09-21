@@ -6,6 +6,7 @@ import modal from "./module/modal-window";
 import sendForm from "./module/send-form";
 
 window.addEventListener("DOMContentLoaded", () => {
+
     tns({
         container: '.main-banner__slider-content',
         items: 1,

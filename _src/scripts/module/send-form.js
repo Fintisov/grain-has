@@ -6,8 +6,10 @@ function sendForm() {
     async function formSend(event) {
         event.preventDefault();
 
-        let error = formValidate(form);
+        let error = formValidate();
         let formData = new FormData(form);
+
+        console.log(error)
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
@@ -17,6 +19,10 @@ function sendForm() {
                 method: "POST",
                 body: formData,
             });
+
+            let result = await response.json();
+            console.log(result)
+
             if (response.ok) {
                 let result = await response.json();
                 alert(result.message);
@@ -31,7 +37,7 @@ function sendForm() {
         }
     }
 
-    function formValidate(form) {
+    function formValidate() {
         let error = 0;
         let formReq = document.querySelectorAll("._req");
 
