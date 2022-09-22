@@ -48,9 +48,6 @@ function sendForm() {
             } else if (elem.getAttribute("type") === "checkbox" && elem.checked === false) {
                 formAddError(elem);
                 error++;
-            } else if (elem.getAttribute("id") === "country" && elem.value === "-") {
-                formAddError(elem);
-                error++;
             } else {
                 if (elem.value === "") {
                     formAddError(elem);

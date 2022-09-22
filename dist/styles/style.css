@@ -2573,7 +2573,7 @@ body.hidden .main-nav.show {
 
 .main-nav__link {
   font: 500 18px/1.25 "MinSans", sans-serif;
-  color: #000000;
+  color: #ffffff;
   text-transform: uppercase;
   display: inline-block;
   scale: 1;
@@ -3134,6 +3134,7 @@ body.hidden .main-nav.show {
 
   .main-nav__link {
     font-size: 24px;
+    color: #000000;
   }
 
   .main-nav__contact {
@@ -3521,7 +3522,6 @@ body.hidden .main-nav.show {
 
   .footer__copyright {
     font-size: 14px;
-    margin: 0 auto;
   }
 
   .footer-content-wrapper {
@@ -3656,6 +3656,9 @@ body.hidden .main-nav.show {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 40px;
   }
 

@@ -148,6 +148,7 @@
 
     @include max-screen(414px) {
       flex-direction: column;
+      align-items: flex-start;
       gap: 40px;
     }
 
