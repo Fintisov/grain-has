@@ -33,4 +33,5 @@ window.addEventListener("DOMContentLoaded", () => {
     modal("modal-certificate");
 
     sendForm();
+
 })
